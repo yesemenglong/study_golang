@@ -27,6 +27,10 @@ func nonempty2(strings []string) []string {
 	return out
 }
 
+func test(t map[string]int) {
+	t["1"] = 1
+}
+
 func main() {
 	data := []string{"one", "", "three"}
 	fmt.Printf("%q\n", nonempty2(data))
@@ -35,4 +39,8 @@ func main() {
 	s := []int{5}
 	s = append(s, 1)
 	fmt.Println(s)
+	t := map[string]int{}
+	t["1"] = 2
+	test(t)
+	fmt.Println(t)
 }
